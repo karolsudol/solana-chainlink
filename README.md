@@ -25,3 +25,12 @@
 - `anchor deploy --provider.cluster devnet`
 
 - `anchor test`
+
+## TESTS COVERAGE
+
+<br/>
+<p align="center">
+<img src="img/test.png" >
+</a>
+</p>
+<br/>
