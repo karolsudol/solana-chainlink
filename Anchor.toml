@@ -2,14 +2,22 @@
 seeds = false
 skip-lint = false
 [programs.localnet]
-solana_chainlink = "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS"
+solana_chainlink = "4YVHiLzdjBNDQnHc5geB3Y2tGABZwzhZLqXCZMCW4QMZ"
 
 [registry]
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "Localnet"
-wallet = "/home/karolsudol/.config/solana/id.json"
+cluster = "devnet"
+wallet = "./id.json"
 
 [scripts]
 test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
+
+[[test.genesis]]
+address = "A7Jh2nb1hZHwqEofm4N8SXbKTj82rx7KUfjParQXUyMQ"
+program = "../../target/deploy/store.so"
+
+[[test.genesis]]
+address = "2F5NEkMnCRkmahEAcQfTQcZv1xtGgrWFfjENtTwHLuKg"
+program = "../../target/deploy/access_controller.so"
